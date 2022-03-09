@@ -16,6 +16,8 @@ Sono state implentate per semplicta solamente le seguenti tabelle:
 - Supplier: Catalogo Fornitori
 - PriceList: Tabella contenete le condizioni di vendita o scontistiche per determinati prodotti
 
+(PS: La valuta coniderata è solo €)
+
 La percentuale di sconto che un fornitore potrebbe offrire può essere correlata:
 - al valore totale dell'ordine --> CONDZIONE IMPORTO RAGGIUNTO (VAL)
 - alla quantità ordinata  --> CONDIZIONE QTA DA ORDINARE (NR)
