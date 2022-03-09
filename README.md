@@ -21,12 +21,14 @@ La percentuale di sconto che un fornitore potrebbe offrire può essere correlata
 - alla quantità ordinata  --> CONDIZIONE QTA DA ORDINARE (NR)
 - potrebbe essere limitata a una data/stagione particolare --> CINZIONE SCONTO VALIDO NEL PERIODO DI ORDINE (TIME)
 
-Per gestire le varie tipologie di sconti (NR, VAL, TIME) La tabella PriceList si compone di campi :
-Id	IdProduct	IdDiscountType	LowLimit	HighLimit	ValueLimit	Discount%	StartDate	EndDate	    Discontinued
-1	A202CF3   	NR				      10			  20		    0.00		    1.00		  01/01/2022	31/12/2099	0 ----> (sconto del prezzo di listino del 1% per QTA TRA 10<=x<=20 )
-1	A202CF3   	NR				      21			  999999    0.00		    3.00		  01/01/2022	31/12/2099	0 ----> (sconto del prezzo di listino del 1% per QTA TRA 21<=x<=999999 )
-2	A202CF3   	VAL				      NULL	    NULL		  1000.00		  5.00		  01/03/2022	08/03/2022	0  ---> (sconto del 5% sul totale nella data di validità)
-8	UZ456HGT  	TIME			      NULL	    NULL		  0.00		    2.00		  01/09/2022	30/09/2022	0  ---> (sconto del 2% a settembre)
+Per gestire le varie tipologie di sconti (NR, VAL, TIME) La tabella PriceList si compone di campi:
+
+
+Id IdProduct	IdDiscountType	LowLimit	HighLimit	ValueLimit	Discount%	StartDate	  EndDate	    Discontinued
+1	 A202CF3   	NR				      10			  20		    0.00		    1.00		  01/01/2022	31/12/2099	0 ----> (sconto del prezzo di listino del 1% per QTA TRA 10<=x<=20 )
+1	 A202CF3   	NR				      21			  999999    0.00		    3.00		  01/01/2022	31/12/2099	0 ----> (sconto del prezzo di listino del 1% per QTA TRA 21<=x<=999999 )
+2	 A202CF3   	VAL				      NULL	    NULL		  1000.00		  5.00		  01/03/2022	08/03/2022	0  ---> (sconto del 5% sul totale nella data di validità)
+8	 UZ456HGT  	TIME			      NULL	    NULL		  0.00		    2.00		  01/09/2022	30/09/2022	0  ---> (sconto del 2% a settembre)
 
 Quando devi ordinare un articolo, scegli un articolo e la quantità che desideri acquistare; il sistema:
 
