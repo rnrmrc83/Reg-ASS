@@ -39,3 +39,4 @@ Quando devi ordinare un articolo, scegli un articolo e la quantità che desideri
 
 
 Visualizza anche i giorni minimi necessari a ciascun fornitore per spedire il tuo ordine; in questo modo puoi scegliere che un fornitore più veloce sia comunque migliore di uno più economico.
+
