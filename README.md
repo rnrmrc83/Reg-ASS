@@ -27,11 +27,15 @@ Per gestire le varie tipologie di sconti (NR, VAL, TIME) La tabella PriceList si
 IdProduct | IdDiscountType | LowLimit | HighLimit | ValueLimit | Discount% | StartDate |   EndDate |     Discontinued
 
 A202CF3   | NR  |  10   |  20     |   0.00   |   1.00  |   01/01/2022 | 31/12/2099 | 0  
+
 (sc del prezzo di listino del 1% per QTA TRA 10<=x<=20 )
+
 A202CF3   | NR  |  21   |  99999  |  0.00    |   3.00  |   01/01/2022 | 31/12/2099 | 0 
 (sc del prezzo di listino del 1% per QTA TRA 21<=x<=999999 )
+
 A202CF3   | VAL |  NULL |  NULL   |   1000.00|   5.00  |   01/03/2022 | 08/03/2022 | 0 
 (sc del 5% sul totale nella data di validità)
+
 UZ456HGT  | TIME|  NULL |  NULL   |   0.00   |   2.00  |   01/09/2022 | 30/09/2022 | 0   
 (sc del 2% a settembre)
 
