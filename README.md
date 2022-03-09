@@ -16,14 +16,26 @@ Sono state implentate per semplicta solamente le seguenti tabelle:
 - Supplier: Catalogo Fornitori
 - PriceList: Tabella contenete le condizioni di vendita o scontistiche per determinati prodotti
 
-La percentuale di sconto che un fornitore potrebbe offrire può essere correlata :
-- al valore totale dell'ordine --> CINDZIONE IMPORTO RAGGIUNTO
-- alla quantità ordinata  --> CONDIZIONE QTA DA ORDINARE
-- potrebbe essere limitata a una data/stagione particolare --> CINZIONE SCONTO VALIDO NEL PERIODO DI ORDINE
+La percentuale di sconto che un fornitore potrebbe offrire può essere correlata:
+- al valore totale dell'ordine --> CONDZIONE IMPORTO RAGGIUNTO (VAL)
+- alla quantità ordinata  --> CONDIZIONE QTA DA ORDINARE (NR)
+- potrebbe essere limitata a una data/stagione particolare --> CINZIONE SCONTO VALIDO NEL PERIODO DI ORDINE (TIME)
+
+Per gestire le varie tipologie di sconti (NR, VAL, TIME) La tabella PriceList si compone di campi :
+Id	IdProduct	IdDiscountType	LowLimit	HighLimit	ValueLimit	Discount%	StartDate	EndDate	    Discontinued
+1	A202CF3   	NR				      10			  20		    0.00		    1.00		  01/01/2022	31/12/2099	0 -----------> (sconto del prezzo di listino del 1% per QTA TRA 10<=x<=20 )
+1	A202CF3   	NR				      21			  999999    0.00		    3.00		  01/01/2022	31/12/2099	0 -----------> (sconto del prezzo di listino del 1% per QTA TRA 21<=x<=999999 )
+2	A202CF3   	VAL				      NULL	    NULL		  1000.00		  5.00		  01/03/2022	08/03/2022	0  --------> (sconto del 5% sul totale nella data di validità)
+8	UZ456HGT  	TIME			      NULL	    NULL		  0.00		    2.00		  01/09/2022	30/09/2022	0  --------> (sconto del 2% a settembre)
+
+Quando devi ordinare un articolo, scegli un articolo e la quantità che desideri acquistare; il sistema:
+
+- Filtra prodotti con disponibilita >= all qta richiesta
+- Individua sconto NR
+- Individua e applica sconto Valore sul TOT
+- Individia e applica sconto extra 
+- Visualizza l'elenco dei risultati ordinando per il prezzo migliore.
 
 
-
-
-Quando devi ordinare un articolo, scegli un articolo e la quantità che desideri acquistare; il sistema dovrebbe trovare quali fornitori vendono quell'articolo (verificare se è disponibile una quantità sufficiente in magazzino) e calcolare l'importo totale dell'ordine di acquisto applicando gli sconti (se disponibili). L'elenco dei risultati dovrebbe suggerire il miglior fornitore evidenziando quello più economico.
 
 Visualizza anche i giorni minimi necessari a ciascun fornitore per spedire il tuo ordine; in questo modo puoi scegliere che un fornitore più veloce sia comunque migliore di uno più economico.
