@@ -1,4 +1,4 @@
-# Regesta
+# Regesta PO
 PurchaseOrderReg
 
 
@@ -7,7 +7,10 @@ Implementazione di un Il tuo negozio vende beni che puoi acquistare da diversi f
 
 ARCHITETTURA
 Applicazione "embionale" .NET/C# WebForm + DB MSSQL 
+ISTRZIONI
 
+-Restorare .bak 
+-edit App.config per la connessione
 DATABASE PurchaseOReg.bak (contiene dati di test)
 Sono state implentate per semplicta solamente le seguenti tabelle:
 
@@ -48,4 +51,6 @@ Quando devi ordinare un articolo, scegli un articolo e la quantità che desideri
 - Individua e applica sconto Valore sul TOT
 - Individia e applica sconto extra 
 - Visualizza l'elenco dei risultati ordinando per il prezzo migliore.
+
+
 
